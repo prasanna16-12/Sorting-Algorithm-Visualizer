@@ -29,7 +29,7 @@ function binarySearch() {
     // add algorithm
     document.getElementById(
       "algorithm"
-    ).innerHTML = `<pre id="algorithmLines" style="line-height: 39px;">
+    ).innerHTML = `<pre id="algorithmLines" style="line-height: 35px;">
   binarySearch(start,end)
     if array[mid] == val :
       return mid
