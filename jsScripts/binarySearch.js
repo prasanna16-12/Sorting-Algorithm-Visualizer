@@ -15,28 +15,28 @@ function binarySearch() {
   // make btn dive unclickble
   document.getElementById("sorting-btns").style.pointerEvents = "none";
 
-  //   //add complexity
-  //   document.getElementById(
-  //     "complexity"
-  //   ).innerHTML = `<pre style="line-height: 30px; margin-top: 8%;">
-  //     <span style="font-size:x-large;">Worst Case :  </span> <span style="font-size: xx-large;color:#3ddc84;">O( n² )
-  //     </span>
-  //     <span style="font-size:x-large;">Best Case : </span> <span style="font-size: xx-large;color:#3ddc84;">O( n² )
-  //     </span>
-  //     <span style="font-size:x-large;">Average Case : </span> <span style="font-size: xx-large;color:#3ddc84;">O( n² )
-  //     </span></pre>`;
+    //add complexity
+    document.getElementById(
+      "complexity"
+    ).innerHTML = `<pre style="line-height: 30px; margin-top: 8%;">
+      <span style="font-size:x-large;">Worst Case :  </span> <span style="font-size: xx-large;color:#3ddc84;">O( log n )
+      </span>
+      <span style="font-size:x-large;">Best Case : </span> <span style="font-size: xx-large;color:#3ddc84;">O( 1 )
+      </span>
+      <span style="font-size:x-large;">Average Case : </span> <span style="font-size: xx-large;color:#3ddc84;">O( log n )
+      </span></pre>`;
 
-  //   // add algorithm
-  //   document.getElementById(
-  //     "algorithm"
-  //   ).innerHTML = `<pre id="algorithmLines" style="line-height: 39px;">
-  // repeat (numOfElements - 1) times
-  //   set the first unsorted element as the minimum
-  //   for each of the unsorted elements
-  //     if element < currentMinimum
-  //       set element as new minimum
-  //   swap minimum with first unsorted position
-  // </pre>`;
+    // add algorithm
+    document.getElementById(
+      "algorithm"
+    ).innerHTML = `<pre id="algorithmLines" style="line-height: 39px;">
+  binarySearch(start,end)
+    if array[mid] == val :
+      return mid
+    if array[mid] > val :
+      retun binarySearch(start,mid-1)
+    if array[mid] < val :
+      retun binarySearch(mid+1,end)</pre>`;
 
   // sorting
   document.getElementById("text").innerHTML = "Sorting data";
