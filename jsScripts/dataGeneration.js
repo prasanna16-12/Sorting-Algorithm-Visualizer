@@ -70,8 +70,11 @@ function createBars(list) {
 function generateData(lenght = 10, range = 10) {
 
     log.style.display = "none";
+    
+    document.getElementById("rangeStatus").innerHTML = range;
+    document.getElementById("lenghtStatus").innerHTML = lenght;
 
-
+    
     
     removeAllChildNodes(parent);
     var list = [];
