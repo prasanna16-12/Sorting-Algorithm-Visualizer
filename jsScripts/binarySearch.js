@@ -1,6 +1,6 @@
 function binarySearch() {
   var value = document.getElementById("searchValue").value;
-  if (value && value <= rangeSlider.value) {
+  if (value) {
     c_delay = 0;
 
     // hide nav-bar
