@@ -1,6 +1,6 @@
 function linearSearch() {
   var value = document.getElementById("searchValue").value;
-  if (value && value <= rangeSlider.value) {
+  if (value) {
     c_delay = 0;
     value = Number(value);
     // hide nav-bar
