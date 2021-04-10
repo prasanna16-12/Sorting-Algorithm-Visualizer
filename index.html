@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sorting Visualization</title>
+</head>
+
+<body>
+    <div class="background">
+
+        <div class="nav-bar" id="navigation">
+            <div class="inputs" style="margin-left: 16px;">
+                <label for="inputNumber" style="color: rgb(0, 0, 0); margin-top: 0"> Input: </label>
+                <input type="text" id="inputNumber" value="20,10,30,5,50,45,15">
+                <button class="btn" style="margin-right:16px;" onclick="getData()">Go
+                </button>
+
+                <div style="display: inline; ; justify-content: center;display:inline-flex;">
+                    <label for="range">Range : </label>
+                    <input type="range" style="margin-right: 16px;" min="10" max="100" value="10" id="range">
+                    <label for="leght">Lenght : </label>
+                    <input type="range" min="3" max="20" value="10" id="lenght">
+                    <button class="btn" style="margin-right: 16px;" onclick="generateData()">
+                        Random
+                    </button>
+                    <label for="speed">Speed : </label>
+                    <input type="range" style="margin-right: 16px;" min="1" max="5" value="2" step="1" id="speed">
+                </div>
+            </div>
+            <h1 style="margin-right: 16px;">
+                Sorting Visualizer
+            </h1>
+
+        </div>
+        <div id="sorting-btns">
+            <button style="margin-top: 16px;" class="btn" id="Bubble" onclick="sortBubbleSort()">Bubble
+            </button>
+            <button style="margin-top: 16px; margin-left: 16px;margin-right: 16px;" class="btn" id="Insertion"
+                onclick="sortInsertionSort()">Insertion
+            </button>
+            <button style="margin-top: 16px;" class="btn" id="Quick" onclick="sortQuickSort()">Quick
+            </button>
+            <button style="margin-top: 16px;margin-right: 16px;margin-left: 16px" class="btn" id="Selection"
+                onclick="sortSelectionSort()">Selection
+            </button>
+            <form action="#"
+                style="display: inline; background-color: rgba(126, 160, 129, 0.564);padding:.75rem .5rem;border-radius: .5rem;">
+                <input style="background-color: transparent; color: springgreen;border-color:springgreen;" type="number"
+                    min="1" max="10" id="searchValue" required />
+                <button class="btn" onclick="binarySearch()" id="binSearch">Binary Search</button>
+                <button class="btn" onclick="linearSearch()" id="linSearch">Linear Search</button>
+                <button class="btn" onclick="jumpSearch()" id="jmpSearch">Jump Search</button>
+            </form>
+        </div>
+        <div id="log">
+
+        </div>
+        <div id="containeer">
+
+            <!--   this kind of divs will be added dynamically
+            <div class="pole" style="height: 200px;">
+               <span>
+                   4
+               </span>
+            </div> -->
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-head">
+                    complexity</div>
+                <div id="complexity" class="innerCard">
+                    <pre style="font-size: 1rem;color:mediumspringgreen;margin-top: 3rem;font-size: 1.2rem;margin-left: 32px;line-height: 30px;
+">The complexity of an algorithm is a 
+function describing the efficiency 
+of the algorithm in terms 
+of the amount of data the algorithm 
+must process.</pre>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-head">
+                    Algorithm</div>
+                <div id="algorithm" class="innerCard">
+                    <!-- algo here -->
+                    <pre style="font-size: 1rem;color:mediumspringgreen;margin-top: 1.5rem;font-size: 1.2rem;line-height: 33px;
+">'a process or set of rules to be 
+followed in calculations or 
+other problem-solving operations, 
+especially by a computer.''
+</pre>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-head">
+                    Status</div>
+                <div id="status" class="innerCard">
+                    <div id="text"></div>
+
+                    <div style="display: flex; justify-content: center;align-items: center;flex: 1;">
+                        <div class="mini-cards">
+                            <div id="speedStatus">200</div>
+                            <div class="card-head" style="font-size:18px;top :-45%;box-shadow:none;left:0px;">Speed
+                            </div>
+                        </div>
+                        <div class="mini-cards">
+                            <div id="rangeStatus">10</div>
+                            <div class="card-head" style="font-size:18px;top :-45%;box-shadow:none;left:0px;">range
+                            </div>
+                        </div>
+                        <div class="mini-cards">
+                            <div id="lenghtStatus">10</div>
+                            <div class="card-head" style="font-size:18px;top :-45%;box-shadow:none;left:0px;">size</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./jsScripts/app.js"></script>
+    <script src="./jsScripts/dataGeneration.js"></script>
+    <script src="./jsScripts/animation.js"></script>
+    <script src="./jsScripts/bubbleSort.js"></script>
+    <script src="./jsScripts/quickSort.js"></script>
+    <script src="./jsScripts/insertionSort.js"></script>
+    <script src="./jsScripts/selectionSort.js"></script>
+    <script src="./jsScripts/binarySearch.js"></script>
+    <script src="./jsScripts/linearSearch.js"></script>
+    <script src="./jsScripts/jumpSearch.js"></script>
+
+
+</body>
+
+</html>
