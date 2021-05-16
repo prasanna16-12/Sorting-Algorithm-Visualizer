@@ -1,5 +1,4 @@
-const ENABLE = "enable";
-const DISABLE = "disable";
+
 
 // global element for containeer
 const parent = document.getElementById("containeer");
